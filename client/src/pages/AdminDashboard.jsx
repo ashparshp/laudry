@@ -15,7 +15,7 @@ import {
 import axios from "axios";
 import ThemeToggle from "../components/ThemeToggle.jsx";
 
-const API_URL = process.env.REACT_APP_API_URL || "http://localhost:8088";
+const API_URL = import.meta.env.REACT_APP_API_URL || "http://localhost:8088";
 
 const AdminDashboard = () => {
   const { user, isAuthenticated, isAdmin, loading } = useAuth();

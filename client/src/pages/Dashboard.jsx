@@ -4,6 +4,8 @@ import { Navigate } from "react-router-dom";
 import { Package, Clock, Star, User, MapPin, Phone } from "lucide-react";
 import axios from "axios";
 
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:8088";
+
 const Dashboard = () => {
   const { user, isAuthenticated, loading } = useAuth();
   const [orders, setOrders] = useState([]);

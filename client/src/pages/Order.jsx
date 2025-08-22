@@ -11,6 +11,8 @@ import {
 } from "lucide-react";
 import axios from "axios";
 
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:8088";
+
 const Order = () => {
   const { isAuthenticated, user } = useAuth();
   const [orderType, setOrderType] = useState("guest");

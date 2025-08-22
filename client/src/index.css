@@ -49,6 +49,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease;
 }
 
 code {
@@ -56,16 +57,74 @@ code {
     monospace;
 }
 
-/* Debug styles - remove after testing */
-.dark {
-  background-color: red !important;
+/* Custom gradient classes */
+.bg-gradient-indigo-caribbean {
+  background: linear-gradient(135deg, #6366f1 0%, #00e6d7 100%);
 }
 
-html.dark {
-  background-color: red !important;
+.bg-gradient-caribbean-indigo {
+  background: linear-gradient(135deg, #00e6d7 0%, #6366f1 100%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.bg-gradient-indigo-emerald {
+  background: linear-gradient(135deg, #6366f1 0%, #10b981 100%);
+}
+
+.bg-gradient-white-caribbean {
+  background: linear-gradient(135deg, #ffffff 0%, #cffffe 100%);
+}
+
+.bg-gradient-caribbean-white {
+  background: linear-gradient(135deg, #00e6d7 0%, #ffffff 100%);
+}
+
+/* Dark mode gradients */
+.dark .bg-gradient-white-caribbean {
+  background: linear-gradient(135deg, #374151 0%, #0e6161 100%);
+}
+
+.dark .bg-gradient-caribbean-white {
+  background: linear-gradient(135deg, #0e6161 0%, #374151 100%);
+}
+
+/* Hover effects for buttons */
+.btn-gradient-primary {
+  @apply font-medium py-2 px-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg;
+  background: linear-gradient(135deg, #6366f1 0%, #00e6d7 100%);
+  color: white;
+}
+
+.btn-gradient-secondary {
+  @apply font-medium py-2 px-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg;
+  background: linear-gradient(135deg, #00e6d7 0%, #6366f1 100%);
+  color: white;
+}
+
+.btn-outline-primary {
+  @apply border-2 border-indigo-500 text-indigo-600 dark:text-indigo-400 font-medium py-2 px-4 rounded-lg transition-all duration-300 hover:bg-indigo-500 hover:text-white;
+}
+
+.btn-outline-caribbean {
+  @apply border-2 font-medium py-2 px-4 rounded-lg transition-all duration-300;
+  border-color: #00e6d7;
+  color: #059690;
+}
+
+.btn-outline-caribbean:hover {
+  background-color: #00e6d7;
+  color: white;
+}
+
+.dark .btn-outline-caribbean {
+  color: #22fff6;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+/* Status badge animations */
+.status-badge {
+  @apply px-3 py-1 rounded-full text-xs font-medium shadow-sm transition-all duration-200 hover:shadow-md;
 }

@@ -22,10 +22,10 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-indigo-emerald rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-indigo-caribbean rounded-lg flex items-center justify-center shadow-lg">
                 <span className="text-white font-bold text-lg">L</span>
               </div>
-              <span className="font-bold text-xl text-gray-900 dark:text-white">
+              <span className="font-bold text-xl bg-gradient-to-r from-indigo-600 to-caribbean-600 bg-clip-text text-transparent">
                 LaundryPro
               </span>
             </Link>
@@ -35,13 +35,13 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-4">
             <Link
               to="/"
-              className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              className="text-gray-700 dark:text-gray-300 hover:text-caribbean-600 dark:hover:text-caribbean-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
             >
               Home
             </Link>
             <Link
               to="/order"
-              className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              className="text-gray-700 dark:text-gray-300 hover:text-caribbean-600 dark:hover:text-caribbean-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
             >
               Order Now
             </Link>
@@ -50,14 +50,14 @@ const Navbar = () => {
               <>
                 <Link
                   to="/dashboard"
-                  className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="text-gray-700 dark:text-gray-300 hover:text-caribbean-600 dark:hover:text-caribbean-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                 >
                   Dashboard
                 </Link>
                 {isAdmin && (
                   <Link
                     to="/admin"
-                    className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                    className="text-gray-700 dark:text-gray-300 hover:text-caribbean-600 dark:hover:text-caribbean-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                   >
                     Admin
                   </Link>
@@ -79,13 +79,13 @@ const Navbar = () => {
               <>
                 <Link
                   to="/login"
-                  className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="text-gray-700 dark:text-gray-300 hover:text-caribbean-600 dark:hover:text-caribbean-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                 >
                   Login
                 </Link>
                 <Link
                   to="/register"
-                  className="bg-gradient-indigo-emerald text-white px-4 py-2 rounded-md text-sm font-medium hover:opacity-90 transition-opacity"
+                  className="bg-gradient-indigo-caribbean text-white px-4 py-2 rounded-md text-sm font-medium hover:opacity-90 hover:scale-105 transition-all duration-300 shadow-lg"
                 >
                   Register
                 </Link>
@@ -94,7 +94,7 @@ const Navbar = () => {
 
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              className="p-2 rounded-md bg-gradient-to-r from-indigo-500 to-caribbean-500 text-white hover:from-indigo-600 hover:to-caribbean-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
               title={isDark ? "Switch to light mode" : "Switch to dark mode"}
             >
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
@@ -105,7 +105,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center space-x-2">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              className="p-2 rounded-md bg-gradient-to-r from-indigo-500 to-caribbean-500 text-white hover:from-indigo-600 hover:to-caribbean-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
             >
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </button>
@@ -124,14 +124,14 @@ const Navbar = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-gray-800 border-t dark:border-gray-700">
               <Link
                 to="/"
-                className="block text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-base font-medium transition-colors"
+                className="block text-gray-700 dark:text-gray-300 hover:text-caribbean-600 dark:hover:text-caribbean-400 px-3 py-2 rounded-md text-base font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
                 to="/order"
-                className="block text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-base font-medium transition-colors"
+                className="block text-gray-700 dark:text-gray-300 hover:text-caribbean-600 dark:hover:text-caribbean-400 px-3 py-2 rounded-md text-base font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Order Now
@@ -141,7 +141,7 @@ const Navbar = () => {
                 <>
                   <Link
                     to="/dashboard"
-                    className="block text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-base font-medium transition-colors"
+                    className="block text-gray-700 dark:text-gray-300 hover:text-caribbean-600 dark:hover:text-caribbean-400 px-3 py-2 rounded-md text-base font-medium transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Dashboard
@@ -149,7 +149,7 @@ const Navbar = () => {
                   {isAdmin && (
                     <Link
                       to="/admin"
-                      className="block text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-base font-medium transition-colors"
+                      className="block text-gray-700 dark:text-gray-300 hover:text-caribbean-600 dark:hover:text-caribbean-400 px-3 py-2 rounded-md text-base font-medium transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Admin
@@ -169,14 +169,14 @@ const Navbar = () => {
                 <>
                   <Link
                     to="/login"
-                    className="block text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-base font-medium transition-colors"
+                    className="block text-gray-700 dark:text-gray-300 hover:text-caribbean-600 dark:hover:text-caribbean-400 px-3 py-2 rounded-md text-base font-medium transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Login
                   </Link>
                   <Link
                     to="/register"
-                    className="block bg-gradient-indigo-emerald text-white px-3 py-2 rounded-md text-base font-medium hover:opacity-90 transition-opacity"
+                    className="block bg-gradient-indigo-caribbean text-white px-3 py-2 rounded-md text-base font-medium hover:opacity-90 transition-opacity"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Register

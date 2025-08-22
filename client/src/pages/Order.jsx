@@ -479,7 +479,7 @@ const Order = () => {
                       />
                     </div>
                   </div>
-                  
+
                   <div className="mt-4">
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                       Pickup Address *
@@ -728,30 +728,30 @@ const Order = () => {
 
               {/* Notes */}
               <div>
-                <label className="block text-lg font-semibold text-gray-700 dark:text-gray-300 mb-3">
+                <label className="block text-base font-semibold text-gray-700 dark:text-gray-300 mb-2">
                   Special Instructions (Optional)
                 </label>
                 <textarea
-                  rows="4"
+                  rows="2"
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all"
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all"
                   placeholder="Any special care instructions, fabric details, or delivery preferences..."
                 />
               </div>
 
               {/* Submit Buttons */}
-              <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-6">
-                <div className="space-y-4">
+              <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-4">
+                <div className="space-y-3">
                   <button
                     type="submit"
                     disabled={loading || !pricing}
-                    className="w-full bg-gradient-indigo-emerald text-white py-4 px-6 rounded-lg text-lg font-semibold hover:opacity-90 transition-all disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 shadow-lg"
+                    className="w-full bg-gradient-indigo-emerald text-white py-3 px-4 rounded-lg text-base font-semibold hover:opacity-90 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
                   >
                     {loading ? (
                       <div className="flex items-center justify-center">
                         <svg
-                          className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                          className="animate-spin -ml-1 mr-3 h-4 w-4 text-white"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -780,9 +780,9 @@ const Order = () => {
                   <button
                     type="button"
                     onClick={handleWhatsApp}
-                    className="w-full bg-green-600 hover:bg-green-700 text-white py-4 px-6 rounded-lg text-lg font-semibold transition-all flex items-center justify-center hover:scale-105 shadow-lg"
+                    className="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded-lg text-base font-semibold transition-all flex items-center justify-center shadow-lg"
                   >
-                    <MessageCircle className="w-6 h-6 mr-3" />
+                    <MessageCircle className="w-5 h-5 mr-2" />
                     Order via WhatsApp
                   </button>
                 </div>
@@ -791,9 +791,9 @@ const Order = () => {
           </div>
 
           {/* Pricing Summary */}
-          <div className="xl:col-span-1 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 h-fit sticky top-8">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center">
-              <Calculator className="w-6 h-6 mr-3 text-indigo-600" />
+          <div className="xl:col-span-1 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 h-fit sticky top-4">
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+              <Calculator className="w-5 h-5 mr-2 text-indigo-600" />
               Pricing Summary
             </h3>
 
